@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.oshi:oshi-core:3.4.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/3.4.0/d309ad504b8301df1d14d5ee1b7e6005063cc4df/oshi-core-3.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/3.4.0/a4e33f54c202155ed88279df9b482ba8c7628431/oshi-core-3.4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

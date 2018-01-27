@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NukkitArchitecture.iml" filepath="$PROJECT_DIR$/.idea/modules/NukkitArchitecture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NukkitArchitecture_main.iml" filepath="$PROJECT_DIR$/.idea/modules/NukkitArchitecture_main.iml" group="NukkitArchitecture" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NukkitArchitecture_test.iml" filepath="$PROJECT_DIR$/.idea/modules/NukkitArchitecture_test.iml" group="NukkitArchitecture" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SampleOAuth.iml" filepath="$PROJECT_DIR$/.idea/modules/SampleOAuth.iml" group="SampleOAuth" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SampleOAuth/SampleOAuth_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SampleOAuth/SampleOAuth_main.iml" group="SampleOAuth" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SampleOAuth/SampleOAuth_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SampleOAuth/SampleOAuth_test.iml" group="SampleOAuth" />
+    </modules>
+  </component>
+</project>

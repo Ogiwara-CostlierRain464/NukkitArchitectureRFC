@@ -6,7 +6,7 @@ import jp.ogiwara.nukkit.oauth.interfaces.State
 
 //ユーザーのOAuth情報
 data class UserAuthData(var state: State = NonRegister,
-                        var password: String? = null){
+                        private var password: String? = null){
 
     val isLogined: Boolean
         get() = state is Logined
@@ -14,10 +14,14 @@ data class UserAuthData(var state: State = NonRegister,
     val isRegistered: Boolean
         get() = password != null
 
-    fun register(password: String){
-        this.password = password
-        state = Logined
-    }
+    fun register(password: String): Boolean
+        = if(this.password != null){
+            false
+        }else{
+            this.password = password
+            state = Logined
+            true
+        }
 
     fun tryLogin(tryPass: String): Boolean
         = if(tryPass == password){

@@ -3,6 +3,9 @@ My idea's of nukkit plugin architecture
 
 ## SampleOAuth
 
+[Nukkit Version](https://github.com/Ogiwara-CostlierRain464/NukkitArchitectureRFC/tree/master/SampleOAuth)
+[PMMP Version](https://github.com/Ogiwara-CostlierRain464/PMMPArchitectureRFC/tree/master/SampleOAuth/src/ogiwara/oauth)
+
 Mainly, nukkit plugin is event callback based system,  
 so I've applied MVVM and Repository pattern to nukkit plugin architecture.
 

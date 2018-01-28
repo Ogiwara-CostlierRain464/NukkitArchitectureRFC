@@ -55,7 +55,7 @@ class SampleOAuth: PluginBase() , Listener{
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
 
         if(sender !is Player){
-            sender.sendMessage("Only player can execute this command")
+             sender.sendMessage("Only player can execute this command")
             return true
         }
 

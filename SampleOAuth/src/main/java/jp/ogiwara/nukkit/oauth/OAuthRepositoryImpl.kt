@@ -23,7 +23,8 @@ class OAuthRepositoryImpl: OAuthRepository {
     }
 
     override fun logout(playerName: String) {
-        record[playerName]!!.state = NonLogin
+        record[playerName]!!.state =
+                if(record[playerName]!!.isLogined) NonLogin else NonRegister
     }
 
     override fun register(playerName: String, password: String): Boolean {

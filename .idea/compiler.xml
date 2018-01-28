@@ -6,6 +6,8 @@
       <module name="NukkitArchitecture_test" target="1.8" />
       <module name="SampleOAuth_main" target="1.8" />
       <module name="SampleOAuth_test" target="1.8" />
+      <module name="SampleTask_main" target="1.8" />
+      <module name="SampleTask_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

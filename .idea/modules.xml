@@ -8,6 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SampleOAuth.iml" filepath="$PROJECT_DIR$/.idea/modules/SampleOAuth.iml" group="SampleOAuth" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SampleOAuth/SampleOAuth_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SampleOAuth/SampleOAuth_main.iml" group="SampleOAuth" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SampleOAuth/SampleOAuth_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SampleOAuth/SampleOAuth_test.iml" group="SampleOAuth" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SampleTask.iml" filepath="$PROJECT_DIR$/.idea/modules/SampleTask.iml" group="SampleTask" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SampleTask/SampleTask_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SampleTask/SampleTask_main.iml" group="SampleTask" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SampleTask/SampleTask_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SampleTask/SampleTask_test.iml" group="SampleTask" />
     </modules>
   </component>
 </project>

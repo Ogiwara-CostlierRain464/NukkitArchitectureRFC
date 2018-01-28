@@ -1,3 +1,4 @@
 rootProject.name = 'NukkitArchitecture'
 include 'SampleOAuth'
+include 'SampleTask'
 

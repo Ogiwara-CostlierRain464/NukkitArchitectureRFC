@@ -1,0 +1,5 @@
+main: jp.ogiwara.nukkit.task.SampleTask
+name: SampleTask
+version: "Final"
+api: ["1.0.0"]
+description: Sample Task plugin

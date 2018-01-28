@@ -14,7 +14,7 @@ import jp.ogiwara.nukkit.oauth.event.OAuthRegisterEvent
 import jp.ogiwara.nukkit.oauth.interfaces.Dispatcher
 
 /**
- * DIは後で…
+ * Normal event call back, and filter
  */
 @Suppress("unused")
 class SampleOAuth: PluginBase() , Listener{
@@ -27,37 +27,35 @@ class SampleOAuth: PluginBase() , Listener{
 
     @EventHandler
     fun onJoin(event: PlayerJoinEvent){
-        dispatcher.onJoin(event.player)
+        dispatcher.onJoin(event)
     }
 
     @EventHandler
     fun onQuit(event: PlayerQuitEvent){
-        dispatcher.onQuit(event.player)
+        dispatcher.onQuit(event)
     }
 
     @EventHandler
     fun omMove(event: PlayerMoveEvent){
-        val movable = dispatcher.onMove(event.player)
-        if(!movable){
-            event.setCancelled()
-        }
+        dispatcher.onMove(event)
+
     }
 
     @EventHandler
     fun onRegister(event: OAuthRegisterEvent){
-        dispatcher.onRegister(event.player,event.password)
+        dispatcher.onRegister(event)
     }
 
     @EventHandler
     fun onLogin(event: OAuthLoginEvent){
-        dispatcher.onLogin(event.player, event.tryPass)
+        dispatcher.onLogin(event)
     }
 
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
 
         if(sender !is Player){
-            sender.sendMessage("プレイヤーのみがこのコマンドを実行できます")
+            sender.sendMessage("Only player can execute this command")
             return true
         }
 

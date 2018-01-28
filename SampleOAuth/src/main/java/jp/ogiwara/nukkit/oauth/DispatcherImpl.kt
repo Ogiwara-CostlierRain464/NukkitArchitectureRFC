@@ -1,36 +1,48 @@
 package jp.ogiwara.nukkit.oauth
 
 import cn.nukkit.Player
+import cn.nukkit.event.player.PlayerJoinEvent
+import cn.nukkit.event.player.PlayerMoveEvent
+import cn.nukkit.event.player.PlayerQuitEvent
+import jp.ogiwara.nukkit.oauth.event.OAuthLoginEvent
+import jp.ogiwara.nukkit.oauth.event.OAuthRegisterEvent
 import jp.ogiwara.nukkit.oauth.interfaces.*
 
 class DispatcherImpl: Dispatcher {
 
     private val repository: OAuthRepository = OAuthRepositoryImpl()
 
-    override fun onJoin(player: Player) {
-        when(repository.getState(player.name)){
+    override fun onJoin(event: PlayerJoinEvent) {
+        when(repository.getState(event.player.name)){
             is NonLogin -> {
-                player.sendMessage("'/login <password>' でログインして下さい")
+                event.player.sendMessage("'/login <password>' to login your account")
             }
             is NonRegister -> {
-                player.sendMessage("'/register <password>' でログインして下さい")
+                event.player.sendMessage("'/register <password>' to register your account")
             }
         }
     }
 
-    override fun onQuit(player: Player) {
-        repository.logout(player.name)
+    override fun onQuit(event: PlayerQuitEvent) {
+        repository.logout(event.player.name)
     }
 
-    override fun onMove(player: Player): Boolean = repository.getState(player.name) is Logined
-
-    override fun onLogin(player: Player, tryPass: String) {
-        val result = repository.login(player.name, tryPass)
-        player.sendMessage(if(result) "ログインに成功しました" else "ログインに失敗しました、再度お試し下さい")
+    override fun onMove(event: PlayerMoveEvent){
+        if(repository.getState(event.player.name) !is Logined){
+            event.setCancelled()
+        }
     }
 
-    override fun onRegister(player: Player, password: String) {
-        repository.register(player.name, password)
-        player.sendMessage("あなたのパスワードは、'${password}'として登録されました")
+    override fun onLogin(event: OAuthLoginEvent) {
+        val result = repository.login(event.player.name, event.tryPass)
+        event.player.sendMessage(
+                if(result) "Login succeed"
+                else "Failed to login. Try again."
+        )
+    }
+
+    override fun onRegister(event: OAuthRegisterEvent) {
+        repository.register(event.player.name, event.password)
+        event.player.sendMessage("Your password has saved as:'${event.password}'")
     }
 }

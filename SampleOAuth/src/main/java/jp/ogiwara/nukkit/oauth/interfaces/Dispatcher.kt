@@ -1,12 +1,17 @@
 package jp.ogiwara.nukkit.oauth.interfaces
 
 import cn.nukkit.Player
+import cn.nukkit.event.player.PlayerJoinEvent
+import cn.nukkit.event.player.PlayerMoveEvent
+import cn.nukkit.event.player.PlayerQuitEvent
+import jp.ogiwara.nukkit.oauth.event.OAuthLoginEvent
+import jp.ogiwara.nukkit.oauth.event.OAuthRegisterEvent
 
-//抽象かされたイベントごとの処理
+// Abstracted event call back.
 interface Dispatcher {
-    fun onJoin(player: Player)
-    fun onQuit(player: Player)
-    fun onMove(player: Player): Boolean
-    fun onLogin(player: Player, tryPass: String)
-    fun onRegister(player: Player, password: String)
+    fun onJoin(event: PlayerJoinEvent)
+    fun onQuit(event: PlayerQuitEvent)
+    fun onMove(event: PlayerMoveEvent)
+    fun onLogin(event: OAuthLoginEvent)
+    fun onRegister(event: OAuthRegisterEvent)
 }

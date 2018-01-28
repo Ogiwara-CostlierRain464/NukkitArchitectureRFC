@@ -4,7 +4,7 @@ import jp.ogiwara.nukkit.oauth.interfaces.Logined
 import jp.ogiwara.nukkit.oauth.interfaces.NonRegister
 import jp.ogiwara.nukkit.oauth.interfaces.State
 
-//ユーザーのOAuth情報
+//User OAuth data
 data class UserAuthData(var state: State = NonRegister,
                         private var password: String? = null){
 

@@ -1,6 +1,6 @@
 package jp.ogiwara.nukkit.oauth.interfaces
 
-//ログインに関する、現在の状態を確認
+//Offer player's login info
 interface OAuthRepository {
 
     fun getState(playerName: String): State
